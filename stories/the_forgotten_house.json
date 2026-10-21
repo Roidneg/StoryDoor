@@ -1,0 +1,82 @@
+{
+  "id": "the_forgotten_house",
+  "title": "The Forgotten House",
+  "tagline": "One house. Four decisions. Something waiting to be remembered.",
+  "opening": "The envelope arrived this morning. Inside lay a brass key and eight words:\n\nBefore they tear it down, remember me.\n\nThe signature belonged to Elias Vale. You attended his funeral twenty\nyears ago.\n\nNow you stand outside his house. Beyond the iron gate, a demolition\nnotice snaps against its nail. Work begins at dawn.\n\nAn upstairs light moves from one window to the next.\n\nThe key is warm in your palm.",
+  "bible": "\nGENRE\nAtmospheric supernatural mystery. Suspense without graphic gore.\nWrite in second person, present tense.\n\nPREMISE\nYou arrive at a house scheduled for demolition at dawn.\nYou carry a brass key mailed under the name of its former caretaker,\nElias Vale, who died twenty years ago.\n\nFIXED TRUTH\nTwenty years ago, Mara Vale vanished inside the house.\nElias, her brother, died trying to retrieve her.\nThe house preserves Mara as a living memory.\nIt sent the key using Elias's name; Elias has not returned to life.\n\nHOUSE RULES\nThe house can replay and distort memories, but cannot change the past.\nThree rooms hold different accounts of Mara's disappearance:\nthe study, the nursery, and the conservatory.\nEach account contains a truthful clue and a misleading interpretation.\nObjects cannot appear in the reader's possession without being acquired.\nDiscovered clues remain discovered.\nThe reader must make a final decision before demolition begins.\nIf a new keeper freely accepts the role, the house withdraws from the\nordinary world, carrying its keeper and preserved memories with it.\n\nPOSSIBLE ENDINGS\nRelease: uncover how to free Mara and let the house fall.\nKeep: willingly become the house's new keeper, preserving its memories.\nLeave: escape before dawn, leaving Mara's fate unresolved.\n\nNARRATIVE RULES\nHonor the reader's selected action and previously discovered facts.\nNever invent a prior choice or contradict an established consequence.\nDo not reveal undiscovered secrets prematurely.\nThe application controls available choices, clues, and ending eligibility.\nNarrate only the outcome supplied by the application.\n",
+  "constraints": {
+    "time": "The same night, before dawn. Never afternoon or dusk.",
+    "notice": "Nailed to the iron gate. Never loosened or removed.",
+    "key": "The reader carries the brass key. It opens the front door. It does not pulse, communicate, or change temperature.",
+    "lighting": "Dim natural nighttime light. An upstairs light is established in the opening, but no candles or green glow are established.",
+    "study_clue": "The release words are written on the letter beneath its marginal plea, not on a separate parchment or beneath a board.",
+    "conservatory_memory": "Elias only APPEARS to imprison Mara. The reflection reveals that the same action was an attempt to open the door and rescue her. He does not first imprison her and then reconsider.",
+    "release": "Learning the release words does not free Mara. She is freed only when the reader selects release."
+  },
+  "max_decisions": 4,
+  "opening_choices": {
+    "front_door": "Try the mailed key in the front door.",
+    "upstairs_light": "Investigate the light behind the upstairs window.",
+    "demolition_notice": "Read the demolition notice nailed to the gate."
+  },
+  "opening_results": {
+    "front_door": [
+      "key_warning",
+      "The brass key opens the front door. Inside, an inscription reads: 'Keeping is a promise freely made.' You enter the hall."
+    ],
+    "upstairs_light": [
+      "light_pattern",
+      "From the garden, you watch the light pass through three windows, then repeat. It is replaying a route. You return to the front door, unlock it with the brass key, and enter the hall."
+    ],
+    "demolition_notice": [
+      "mara_name",
+      "The notice names Mara Vale as the last registered resident. Someone has scratched beneath it: 'A name is not a possession.' You unlock the front door and enter the hall."
+    ]
+  },
+  "rooms": {
+    "study": {
+      "label": "Search the study and its unfinished letters.",
+      "clue": "release_words",
+      "outcome": "A letter claims Mara chose to remain forever. But its margin records her plea to leave. Beneath it are the words that release a memory: 'You owe this house nothing.'",
+      "conditional_outcomes": {
+        "key_warning": "The letter repeats the inscription from the entrance: keeping requires your willing promise."
+      }
+    },
+    "nursery": {
+      "label": "Listen to the voice coming from the nursery.",
+      "clue": "mara_name",
+      "outcome": "A voice insists the woman in the photograph is a stranger. On the back, in matching handwriting, you find her name: Mara Vale. The voice falls silent when you read it."
+    },
+    "conservatory": {
+      "label": "Follow the footprints into the conservatory.",
+      "clue": "release_words",
+      "outcome": "A memory shows Elias locking a glass door, apparently imprisoning Mara. Its reflection reveals him struggling to open it instead. Scratched into the glass are the words: 'You owe this house nothing.'",
+      "conditional_outcomes": {
+        "light_pattern": "You recognize the repeating movement you observed outside: the light is replaying Elias's rescue attempt."
+      }
+    }
+  },
+  "endings": {
+    "release": "You speak Mara's name and the release words. Her living memory is freed. You leave the house before dawn, allowing demolition to proceed.",
+    "keep": "You freely promise to become the house's keeper. Mara remains a living memory, and you remain inside to preserve its memories. The house withdraws from the ordinary world before demolition.",
+    "leave": "You refuse the house's claim and leave before dawn. You escape, but Mara's fate remains unresolved."
+  },
+  "ending_labels": {
+    "release": "Release — You let her go.",
+    "keep": "Keep — You became the keeper.",
+    "leave": "Leave — You chose the world outside."
+  },
+  "ending_choices": {
+    "release": "Speak Mara’s name and release her.",
+    "keep": "Willingly become the house’s keeper.",
+    "leave": "Leave the house before dawn."
+  },
+  "requirements": {
+    "release": [
+      "mara_name",
+      "release_words"
+    ],
+    "keep": [],
+    "leave": []
+  }
+}

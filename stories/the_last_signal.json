@@ -1,0 +1,79 @@
+{
+  "id": "the_last_signal",
+  "title": "The Last Signal",
+  "tagline": "One station. Five decisions. A voice that cannot wait.",
+  "max_decisions": 5,
+  "opening": "The station closes at midnight. You have spent the evening labeling cables for the crew that will strip them out tomorrow.\n\nAt 23:40, the coast receiver speaks your name. It is your own voice, older by exhaustion, asking you not to switch it off.\n\nBeyond the window, rain obscures the breakwater. The receiver repeats three low notes. Then someone takes a breath.\n\nYour hand rests beside the shutdown switch. You have twenty minutes.",
+  "bible": "A speculative coastal mystery in second person, present tense. The reader is the sole radio operator at a station scheduled to close at midnight. A damaged relay is repeating a transmission from twenty minutes ahead. It is the reader's voice, not a ghost. A maintenance boat is drifting without power beyond the breakwater. Dispatch can rescue it only with verified coordinates and a safe transmission frequency. The future recording is a warning, not a fixed destiny. No time travel, resurrection, or physical arrival of a future self. Events remain inside the station until an ending. No other person enters. Discovered clues never imply that a message has already been sent. Only the final choice transmits or shuts down. Keep human uncertainty and working detail central.",
+  "constraints": {
+    "time": "23:40 to midnight on the same rainy night. Never dawn.",
+    "equipment": "Fixed receiver, transmitter, station clock, paper logs, maintenance diagram. No brass key or supernatural house.",
+    "causality": "The recorded voice is a possible future transmission; the reader can change the outcome.",
+    "rescue": "Only the rescue ending transfers both technicians FROM the disabled Kestrel TO a separate rescue boat. Kestrel remains disabled; it does not carry them safely back to port. Dispatch confirms the transfer before the reader shuts down, all before midnight.",
+    "clock": "The station clock begins at 23:40. Twenty minutes later is 00:00 on the next calendar day, never 23:60. Future recording timestamps may say 00:00; current actions and departure must finish before midnight."
+  },
+  "opening_choices": {
+    "clock": "Compare the recording timestamp with the station clock.",
+    "call_sign": "Copy the call sign beneath the interference.",
+    "power": "Check the backup power meter."
+  },
+  "opening_results": {
+    "clock": [
+      "time_offset",
+      "The recording is dated twenty minutes ahead of the station clock. You write the discrepancy in the log. Nothing has yet been transmitted."
+    ],
+    "call_sign": [
+      "boat_identity",
+      "Between bursts of static you identify the maintenance boat Kestrel. Its call sign matches the station register. Nothing has yet been transmitted."
+    ],
+    "power": [
+      "reserve",
+      "The backup meter shows enough power for one final transmission. You leave the shutdown switch untouched."
+    ]
+  },
+  "rooms": {
+    "chart": {
+      "label": "Check the marked coastal chart.",
+      "clue": "coordinates",
+      "outcome": "The chart places the powerless Kestrel beyond the breakwater. The rescue grid is printed as 'Grid C-7'. You copy it into the log; no rescue has been called."
+    },
+    "relay": {
+      "label": "Trace the relay maintenance diagram.",
+      "clue": "safe_frequency",
+      "outcome": "The maintenance diagram shows that the main frequency feeds back into the damaged relay. The bypass instruction reads: 'Use channel nine'. You identify the safe route but do not transmit."
+    },
+    "tape": {
+      "label": "Listen to the full future recording.",
+      "clue": "time_offset",
+      "outcome": "Your recorded voice describes a failed transmission on the main frequency. Its timestamp is twenty minutes ahead. The warning describes a possible failure, not something you have already done."
+    },
+    "manifest": {
+      "label": "Read the maintenance boat manifest.",
+      "clue": "boat_identity",
+      "outcome": "The manifest names the Kestrel and lists two technicians aboard. Its scheduled return has passed. Their names remain on the paper; neither technician enters the station."
+    }
+  },
+  "endings": {
+    "rescue": "You transmit Grid C-7 on channel nine. Dispatch confirms the coordinates and sends a rescue boat. Before midnight, dispatch confirms that both technicians have transferred from the disabled Kestrel onto the rescue boat and are safe aboard the rescue boat. Kestrel remains disabled. You shut down the station only after this confirmation, still before midnight.",
+    "warn": "You choose to broadcast a general distress warning. Dispatch acknowledges but cannot confirm a rescue before midnight. You leave the receiver powered for the next operator. The technicians’ fate remains unresolved.",
+    "silence": "You switch off the transmitter without sending a message. You leave the station before midnight. The warning ends, and the technicians’ fate remains unresolved."
+  },
+  "ending_choices": {
+    "rescue": "Send the verified rescue transmission.",
+    "warn": "Broadcast a general warning and leave the receiver on.",
+    "silence": "Shut down without transmitting."
+  },
+  "ending_labels": {
+    "rescue": "Rescue — A warning became a way home.",
+    "warn": "Warning — Someone else is listening.",
+    "silence": "Silence — The answer remains offshore."
+  },
+  "requirements": {
+    "rescue": [
+      "coordinates",
+      "safe_frequency"
+    ],
+    "warn": [],
+    "silence": []
+  }
+}

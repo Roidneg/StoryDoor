@@ -1,0 +1,230 @@
+[
+  {
+    "story_id": "the_last_signal",
+    "action": "rescue",
+    "history": [
+      "clock",
+      "relay",
+      "chart",
+      "manifest"
+    ],
+    "decision": 5,
+    "model": "openai/gpt-oss-120b",
+    "prompt_sha256": "ae2085c884fd8c4fa18364713fe20da2abf2f111ed9fb501e440b07e050781f0",
+    "system_prompt": "\nYou narrate an interactive mystery in second person, present tense.\nReturn a short title and approximately 120–180 words of scene text.\n\nUse established_facts and required_outcome as the authoritative record.\nThe story bible and scene_constraints constrain your writing; they\nare not permission to reveal facts the reader has not discovered.\n\nDescribe the selected action and every consequence in required_outcome.\nPreserve quoted clues exactly.\nDo not add clues, objects, characters, supernatural effects, or\nreader decisions beyond the supplied record.\n\nYou may add restrained sensory descriptions of established surroundings:\ntheir texture, ordinary sounds, temperature, and smell.\nDo not turn those descriptions into new events or magical rules.\nUse concrete prose. Avoid repeatedly making the house breathe or sigh.\n\nDo not generate choices; the application supplies them.\nIf ending is null, do not resolve the story or perform a final action.\nIf ending is supplied, conclude with every required consequence.\nNever mention prompts, instructions, constraints, or required outcomes.\nUse the story-specific constraints for timing, objects, and causal order.\n\nReturn only the requested JSON object.\n\n\nA speculative coastal mystery in second person, present tense. The reader is the sole radio operator at a station scheduled to close at midnight. A damaged relay is repeating a transmission from twenty minutes ahead. It is the reader's voice, not a ghost. A maintenance boat is drifting without power beyond the breakwater. Dispatch can rescue it only with verified coordinates and a safe transmission frequency. The future recording is a warning, not a fixed destiny. No time travel, resurrection, or physical arrival of a future self. Events remain inside the station until an ending. No other person enters. Discovered clues never imply that a message has already been sent. Only the final choice transmits or shuts down. Keep human uncertainty and working detail central.",
+    "context": {
+      "opening": "The station closes at midnight. You have spent the evening labeling cables for the crew that will strip them out tomorrow.\n\nAt 23:40, the coast receiver speaks your name. It is your own voice, older by exhaustion, asking you not to switch it off.\n\nBeyond the window, rain obscures the breakwater. The receiver repeats three low notes. Then someone takes a breath.\n\nYour hand rests beside the shutdown switch. You have twenty minutes.",
+      "established_facts": [
+        "The recording is dated twenty minutes ahead of the station clock. You write the discrepancy in the log. Nothing has yet been transmitted.",
+        "The maintenance diagram shows that the main frequency feeds back into the damaged relay. The bypass instruction reads: 'Use channel nine'. You identify the safe route but do not transmit.",
+        "The chart places the powerless Kestrel beyond the breakwater. The rescue grid is printed as 'Grid C-7'. You copy it into the log; no rescue has been called.",
+        "The manifest names the Kestrel and lists two technicians aboard. Its scheduled return has passed. Their names remain on the paper; neither technician enters the station."
+      ],
+      "selected_action": "Send the verified rescue transmission.",
+      "required_outcome": "You transmit Grid C-7 on channel nine. Dispatch confirms the coordinates and sends a rescue boat. Before midnight, dispatch confirms that both technicians have transferred from the disabled Kestrel onto the rescue boat and are safe aboard the rescue boat. Kestrel remains disabled. You shut down the station only after this confirmation, still before midnight.",
+      "decision_number": 5,
+      "ending": "rescue",
+      "scene_constraints": {
+        "time": "23:40 to midnight on the same rainy night. Never dawn.",
+        "equipment": "Fixed receiver, transmitter, station clock, paper logs, maintenance diagram. No brass key or supernatural house.",
+        "causality": "The recorded voice is a possible future transmission; the reader can change the outcome.",
+        "rescue": "Only the rescue ending transfers both technicians FROM the disabled Kestrel TO a separate rescue boat. Kestrel remains disabled; it does not carry them safely back to port. Dispatch confirms the transfer before the reader shuts down, all before midnight.",
+        "clock": "The station clock begins at 23:40. Twenty minutes later is 00:00 on the next calendar day, never 23:60. Future recording timestamps may say 00:00; current actions and departure must finish before midnight."
+      }
+    },
+    "raw_response": "{\n  \"title\": \"Midnight Rescue\",\n  \"text\": \"The rain hammers the panes as the recorder repeats your own exhausted plea, three low notes hanging in the stale air. You glance at the log, the timestamp‑line reading 00:00, twenty minutes ahead of the station clock. The maintenance diagram sits open beside the transmitter, the bypass note underlining channel nine. You pull the sheet with Grid C‑7 from the chart and place it on the desk, the ink still wet.\\n\\nYour finger settles on the switch, then slides to the transmit lever. You key in the coordinates, broadcasting them on channel nine. The carrier hums, then a crackle of acknowledgment: “Copy Grid C‑7, dispatch receiving. Rescue boat en route.”\\n\\nMinutes crawl. The rain‑soaked night is thick with the low drone of the receiver, the occasional splash of waves against the breakwater. At 23:55 a voice cuts through, calm and clear: “Both technicians transferred from the Kestrel to the rescue boat. Boat inbound, safe.”\\n\\nYou watch the clock inch toward midnight. The confirmation settles in your chest. With the rescue secured, you flip the shutdown switch, the lights dimming in a soft sigh. The station powers down at 23:58, the last echo of the transmitter fading into the rain‑filled night, before the clock strikes twelve.\"\n}",
+    "displayed_scene": {
+      "title": "Midnight Rescue",
+      "text": "The rain hammers the panes as the recorder repeats your own exhausted plea, three low notes hanging in the stale air. You glance at the log, the timestamp‑line reading 00:00, twenty minutes ahead of the station clock. The maintenance diagram sits open beside the transmitter, the bypass note underlining channel nine. You pull the sheet with Grid C‑7 from the chart and place it on the desk, the ink still wet.\n\nYour finger settles on the switch, then slides to the transmit lever. You key in the coordinates, broadcasting them on channel nine. The carrier hums, then a crackle of acknowledgment: “Copy Grid C‑7, dispatch receiving. Rescue boat en route.”\n\nMinutes crawl. The rain‑soaked night is thick with the low drone of the receiver, the occasional splash of waves against the breakwater. At 23:55 a voice cuts through, calm and clear: “Both technicians transferred from the Kestrel to the rescue boat. Boat inbound, safe.”\n\nYou watch the clock inch toward midnight. The confirmation settles in your chest. With the rescue secured, you flip the shutdown switch, the lights dimming in a soft sigh. The station powers down at 23:58, the last echo of the transmitter fading into the rain‑filled night, before the clock strikes twelve."
+    },
+    "issues": [],
+    "status": "accepted",
+    "fallback": false,
+    "finish_reason": "stop",
+    "latency_seconds": 1.326,
+    "id": "64bc78e1-1316-4113-852b-5055bfa2f115",
+    "timestamp": "2026-10-21T19:12:01.247927+00:00",
+    "prompt_version": "storydoor-2.1",
+    "check_version": "targeted-2.1",
+    "human_review": "pending",
+    "human_notes": ""
+  },
+  {
+    "story_id": "the_last_signal",
+    "action": "manifest",
+    "history": [
+      "clock",
+      "relay",
+      "chart"
+    ],
+    "decision": 4,
+    "model": "openai/gpt-oss-120b",
+    "prompt_sha256": "ae2085c884fd8c4fa18364713fe20da2abf2f111ed9fb501e440b07e050781f0",
+    "system_prompt": "\nYou narrate an interactive mystery in second person, present tense.\nReturn a short title and approximately 120–180 words of scene text.\n\nUse established_facts and required_outcome as the authoritative record.\nThe story bible and scene_constraints constrain your writing; they\nare not permission to reveal facts the reader has not discovered.\n\nDescribe the selected action and every consequence in required_outcome.\nPreserve quoted clues exactly.\nDo not add clues, objects, characters, supernatural effects, or\nreader decisions beyond the supplied record.\n\nYou may add restrained sensory descriptions of established surroundings:\ntheir texture, ordinary sounds, temperature, and smell.\nDo not turn those descriptions into new events or magical rules.\nUse concrete prose. Avoid repeatedly making the house breathe or sigh.\n\nDo not generate choices; the application supplies them.\nIf ending is null, do not resolve the story or perform a final action.\nIf ending is supplied, conclude with every required consequence.\nNever mention prompts, instructions, constraints, or required outcomes.\nUse the story-specific constraints for timing, objects, and causal order.\n\nReturn only the requested JSON object.\n\n\nA speculative coastal mystery in second person, present tense. The reader is the sole radio operator at a station scheduled to close at midnight. A damaged relay is repeating a transmission from twenty minutes ahead. It is the reader's voice, not a ghost. A maintenance boat is drifting without power beyond the breakwater. Dispatch can rescue it only with verified coordinates and a safe transmission frequency. The future recording is a warning, not a fixed destiny. No time travel, resurrection, or physical arrival of a future self. Events remain inside the station until an ending. No other person enters. Discovered clues never imply that a message has already been sent. Only the final choice transmits or shuts down. Keep human uncertainty and working detail central.",
+    "context": {
+      "opening": "The station closes at midnight. You have spent the evening labeling cables for the crew that will strip them out tomorrow.\n\nAt 23:40, the coast receiver speaks your name. It is your own voice, older by exhaustion, asking you not to switch it off.\n\nBeyond the window, rain obscures the breakwater. The receiver repeats three low notes. Then someone takes a breath.\n\nYour hand rests beside the shutdown switch. You have twenty minutes.",
+      "established_facts": [
+        "The recording is dated twenty minutes ahead of the station clock. You write the discrepancy in the log. Nothing has yet been transmitted.",
+        "The maintenance diagram shows that the main frequency feeds back into the damaged relay. The bypass instruction reads: 'Use channel nine'. You identify the safe route but do not transmit.",
+        "The chart places the powerless Kestrel beyond the breakwater. The rescue grid is printed as 'Grid C-7'. You copy it into the log; no rescue has been called."
+      ],
+      "selected_action": "Read the maintenance boat manifest.",
+      "required_outcome": "The manifest names the Kestrel and lists two technicians aboard. Its scheduled return has passed. Their names remain on the paper; neither technician enters the station.",
+      "decision_number": 4,
+      "ending": null,
+      "scene_constraints": {
+        "time": "23:40 to midnight on the same rainy night. Never dawn.",
+        "equipment": "Fixed receiver, transmitter, station clock, paper logs, maintenance diagram. No brass key or supernatural house.",
+        "causality": "The recorded voice is a possible future transmission; the reader can change the outcome.",
+        "rescue": "Only the rescue ending transfers both technicians FROM the disabled Kestrel TO a separate rescue boat. Kestrel remains disabled; it does not carry them safely back to port. Dispatch confirms the transfer before the reader shuts down, all before midnight.",
+        "clock": "The station clock begins at 23:40. Twenty minutes later is 00:00 on the next calendar day, never 23:60. Future recording timestamps may say 00:00; current actions and departure must finish before midnight."
+      }
+    },
+    "raw_response": "{\n  \"title\": \"The Manifest Unfolds\",\n  \"text\": \"Rain hammers the window panes as you pull the thin, coffee‑stained sheet from the log cabinet. The handwriting is crisp, the ink barely smudged by humidity. Across the top, the word Kestrel is stamped in bold, and beneath it two names: Mara Linde and Jorge Ruiz. Their roles are listed—engineer and communications tech—along with a scheduled return time of 23:30, already past. You note the absence of any signature confirming they boarded the rescue boat; the paper is silent on their fate. The manifest confirms the vessel drifting beyond the breakwater, powerless, and that the two technicians are still listed as aboard, not yet rescued. You trace the ink with a fingertip, feeling the paper’s slight waviness, and file the detail into the log, the rain’s rhythm matching the ticking of the station clock as it edges toward midnight.\"\n}",
+    "displayed_scene": {
+      "title": "The Manifest Unfolds",
+      "text": "Rain hammers the window panes as you pull the thin, coffee‑stained sheet from the log cabinet. The handwriting is crisp, the ink barely smudged by humidity. Across the top, the word Kestrel is stamped in bold, and beneath it two names: Mara Linde and Jorge Ruiz. Their roles are listed—engineer and communications tech—along with a scheduled return time of 23:30, already past. You note the absence of any signature confirming they boarded the rescue boat; the paper is silent on their fate. The manifest confirms the vessel drifting beyond the breakwater, powerless, and that the two technicians are still listed as aboard, not yet rescued. You trace the ink with a fingertip, feeling the paper’s slight waviness, and file the detail into the log, the rain’s rhythm matching the ticking of the station clock as it edges toward midnight."
+    },
+    "issues": [],
+    "status": "accepted",
+    "fallback": false,
+    "finish_reason": "stop",
+    "latency_seconds": 1.116,
+    "id": "7f7ac73e-eb60-4f9b-95a8-896b95266e55",
+    "timestamp": "2026-10-21T19:11:55.725345+00:00",
+    "prompt_version": "storydoor-2.1",
+    "check_version": "targeted-2.1",
+    "human_review": "pending",
+    "human_notes": ""
+  },
+  {
+    "story_id": "the_last_signal",
+    "action": "chart",
+    "history": [
+      "clock",
+      "relay"
+    ],
+    "decision": 3,
+    "model": "openai/gpt-oss-120b",
+    "prompt_sha256": "ae2085c884fd8c4fa18364713fe20da2abf2f111ed9fb501e440b07e050781f0",
+    "system_prompt": "\nYou narrate an interactive mystery in second person, present tense.\nReturn a short title and approximately 120–180 words of scene text.\n\nUse established_facts and required_outcome as the authoritative record.\nThe story bible and scene_constraints constrain your writing; they\nare not permission to reveal facts the reader has not discovered.\n\nDescribe the selected action and every consequence in required_outcome.\nPreserve quoted clues exactly.\nDo not add clues, objects, characters, supernatural effects, or\nreader decisions beyond the supplied record.\n\nYou may add restrained sensory descriptions of established surroundings:\ntheir texture, ordinary sounds, temperature, and smell.\nDo not turn those descriptions into new events or magical rules.\nUse concrete prose. Avoid repeatedly making the house breathe or sigh.\n\nDo not generate choices; the application supplies them.\nIf ending is null, do not resolve the story or perform a final action.\nIf ending is supplied, conclude with every required consequence.\nNever mention prompts, instructions, constraints, or required outcomes.\nUse the story-specific constraints for timing, objects, and causal order.\n\nReturn only the requested JSON object.\n\n\nA speculative coastal mystery in second person, present tense. The reader is the sole radio operator at a station scheduled to close at midnight. A damaged relay is repeating a transmission from twenty minutes ahead. It is the reader's voice, not a ghost. A maintenance boat is drifting without power beyond the breakwater. Dispatch can rescue it only with verified coordinates and a safe transmission frequency. The future recording is a warning, not a fixed destiny. No time travel, resurrection, or physical arrival of a future self. Events remain inside the station until an ending. No other person enters. Discovered clues never imply that a message has already been sent. Only the final choice transmits or shuts down. Keep human uncertainty and working detail central.",
+    "context": {
+      "opening": "The station closes at midnight. You have spent the evening labeling cables for the crew that will strip them out tomorrow.\n\nAt 23:40, the coast receiver speaks your name. It is your own voice, older by exhaustion, asking you not to switch it off.\n\nBeyond the window, rain obscures the breakwater. The receiver repeats three low notes. Then someone takes a breath.\n\nYour hand rests beside the shutdown switch. You have twenty minutes.",
+      "established_facts": [
+        "The recording is dated twenty minutes ahead of the station clock. You write the discrepancy in the log. Nothing has yet been transmitted.",
+        "The maintenance diagram shows that the main frequency feeds back into the damaged relay. The bypass instruction reads: 'Use channel nine'. You identify the safe route but do not transmit."
+      ],
+      "selected_action": "Check the marked coastal chart.",
+      "required_outcome": "The chart places the powerless Kestrel beyond the breakwater. The rescue grid is printed as 'Grid C-7'. You copy it into the log; no rescue has been called.",
+      "decision_number": 3,
+      "ending": null,
+      "scene_constraints": {
+        "time": "23:40 to midnight on the same rainy night. Never dawn.",
+        "equipment": "Fixed receiver, transmitter, station clock, paper logs, maintenance diagram. No brass key or supernatural house.",
+        "causality": "The recorded voice is a possible future transmission; the reader can change the outcome.",
+        "rescue": "Only the rescue ending transfers both technicians FROM the disabled Kestrel TO a separate rescue boat. Kestrel remains disabled; it does not carry them safely back to port. Dispatch confirms the transfer before the reader shuts down, all before midnight.",
+        "clock": "The station clock begins at 23:40. Twenty minutes later is 00:00 on the next calendar day, never 23:60. Future recording timestamps may say 00:00; current actions and departure must finish before midnight."
+      }
+    },
+    "raw_response": "{\n  \"title\": \"Charting the Unseen\",\n  \"text\": \"Rain hammers the window panes as the old clock ticks toward midnight. The recorder crackles, your own weary voice pleading not to pull the switch, and three low notes linger in the stale air. You glance at the laminated coastal chart pinned to the wall, its ink faded but still legible. The marked Kestrel, a maintenance boat, sits just beyond the breakwater, its silhouette a dark smear against the churning surf. Beside it, the grid overlay reads \\\"Grid C-7\\\" in bold black. You pull a fresh sheet from the log, note the discrepancy between the recording's timestamp and the station clock, then copy the coordinates: \\\"Grid C-7, beyond the breakwater.\\\" The entry is clear, no rescue request yet sent, the chart confirming the boat's helpless drift. The paper rustles softly as you set the pen down, the rain's rhythm the only other sound, and the shutdown switch remains warm under your fingertip, waiting for the next decision before the clock strikes twelve.\"\n}",
+    "displayed_scene": {
+      "title": "Charting the Unseen",
+      "text": "Rain hammers the window panes as the old clock ticks toward midnight. The recorder crackles, your own weary voice pleading not to pull the switch, and three low notes linger in the stale air. You glance at the laminated coastal chart pinned to the wall, its ink faded but still legible. The marked Kestrel, a maintenance boat, sits just beyond the breakwater, its silhouette a dark smear against the churning surf. Beside it, the grid overlay reads \"Grid C-7\" in bold black. You pull a fresh sheet from the log, note the discrepancy between the recording's timestamp and the station clock, then copy the coordinates: \"Grid C-7, beyond the breakwater.\" The entry is clear, no rescue request yet sent, the chart confirming the boat's helpless drift. The paper rustles softly as you set the pen down, the rain's rhythm the only other sound, and the shutdown switch remains warm under your fingertip, waiting for the next decision before the clock strikes twelve."
+    },
+    "issues": [],
+    "status": "accepted",
+    "fallback": false,
+    "finish_reason": "stop",
+    "latency_seconds": 1.302,
+    "id": "b255df7a-4451-43e0-93a1-04c5c1680a49",
+    "timestamp": "2026-10-21T19:11:52.122155+00:00",
+    "prompt_version": "storydoor-2.1",
+    "check_version": "targeted-2.1",
+    "human_review": "pending",
+    "human_notes": ""
+  },
+  {
+    "story_id": "the_last_signal",
+    "action": "relay",
+    "history": [
+      "clock"
+    ],
+    "decision": 2,
+    "model": "openai/gpt-oss-120b",
+    "prompt_sha256": "ae2085c884fd8c4fa18364713fe20da2abf2f111ed9fb501e440b07e050781f0",
+    "system_prompt": "\nYou narrate an interactive mystery in second person, present tense.\nReturn a short title and approximately 120–180 words of scene text.\n\nUse established_facts and required_outcome as the authoritative record.\nThe story bible and scene_constraints constrain your writing; they\nare not permission to reveal facts the reader has not discovered.\n\nDescribe the selected action and every consequence in required_outcome.\nPreserve quoted clues exactly.\nDo not add clues, objects, characters, supernatural effects, or\nreader decisions beyond the supplied record.\n\nYou may add restrained sensory descriptions of established surroundings:\ntheir texture, ordinary sounds, temperature, and smell.\nDo not turn those descriptions into new events or magical rules.\nUse concrete prose. Avoid repeatedly making the house breathe or sigh.\n\nDo not generate choices; the application supplies them.\nIf ending is null, do not resolve the story or perform a final action.\nIf ending is supplied, conclude with every required consequence.\nNever mention prompts, instructions, constraints, or required outcomes.\nUse the story-specific constraints for timing, objects, and causal order.\n\nReturn only the requested JSON object.\n\n\nA speculative coastal mystery in second person, present tense. The reader is the sole radio operator at a station scheduled to close at midnight. A damaged relay is repeating a transmission from twenty minutes ahead. It is the reader's voice, not a ghost. A maintenance boat is drifting without power beyond the breakwater. Dispatch can rescue it only with verified coordinates and a safe transmission frequency. The future recording is a warning, not a fixed destiny. No time travel, resurrection, or physical arrival of a future self. Events remain inside the station until an ending. No other person enters. Discovered clues never imply that a message has already been sent. Only the final choice transmits or shuts down. Keep human uncertainty and working detail central.",
+    "context": {
+      "opening": "The station closes at midnight. You have spent the evening labeling cables for the crew that will strip them out tomorrow.\n\nAt 23:40, the coast receiver speaks your name. It is your own voice, older by exhaustion, asking you not to switch it off.\n\nBeyond the window, rain obscures the breakwater. The receiver repeats three low notes. Then someone takes a breath.\n\nYour hand rests beside the shutdown switch. You have twenty minutes.",
+      "established_facts": [
+        "The recording is dated twenty minutes ahead of the station clock. You write the discrepancy in the log. Nothing has yet been transmitted."
+      ],
+      "selected_action": "Trace the relay maintenance diagram.",
+      "required_outcome": "The maintenance diagram shows that the main frequency feeds back into the damaged relay. The bypass instruction reads: 'Use channel nine'. You identify the safe route but do not transmit.",
+      "decision_number": 2,
+      "ending": null,
+      "scene_constraints": {
+        "time": "23:40 to midnight on the same rainy night. Never dawn.",
+        "equipment": "Fixed receiver, transmitter, station clock, paper logs, maintenance diagram. No brass key or supernatural house.",
+        "causality": "The recorded voice is a possible future transmission; the reader can change the outcome.",
+        "rescue": "Only the rescue ending transfers both technicians FROM the disabled Kestrel TO a separate rescue boat. Kestrel remains disabled; it does not carry them safely back to port. Dispatch confirms the transfer before the reader shuts down, all before midnight.",
+        "clock": "The station clock begins at 23:40. Twenty minutes later is 00:00 on the next calendar day, never 23:60. Future recording timestamps may say 00:00; current actions and departure must finish before midnight."
+      }
+    },
+    "raw_response": "{\n  \"title\": \"Diagram of a Choice\",\n  \"text\": \"You pull the maintenance diagram from the drawer, its edges curled from years of handling. The lamp on your desk casts a thin pool of light over the faded schematics, and the rain drums a steady rhythm against the window. Tracing the lines with your fingertip, you see the main transmission frequency loop back into the damaged relay, a feedback path that could amplify any signal you send. Beside the relay symbol, a handwritten note in the margin reads: \\\"Use channel nine\\\"—a bypass instruction scrawled in ink that has not faded. The notation is clear: reroute the output through channel nine to avoid the faulty relay entirely. You note the instruction in your log, the ink darkening under the lamp, but you keep your hand steady on the shutdown switch. No transmission is made; you simply record the safe route, the rain still hissing outside, the clock ticking toward midnight.\"}",
+    "displayed_scene": {
+      "title": "Diagram of a Choice",
+      "text": "You pull the maintenance diagram from the drawer, its edges curled from years of handling. The lamp on your desk casts a thin pool of light over the faded schematics, and the rain drums a steady rhythm against the window. Tracing the lines with your fingertip, you see the main transmission frequency loop back into the damaged relay, a feedback path that could amplify any signal you send. Beside the relay symbol, a handwritten note in the margin reads: \"Use channel nine\"—a bypass instruction scrawled in ink that has not faded. The notation is clear: reroute the output through channel nine to avoid the faulty relay entirely. You note the instruction in your log, the ink darkening under the lamp, but you keep your hand steady on the shutdown switch. No transmission is made; you simply record the safe route, the rain still hissing outside, the clock ticking toward midnight."
+    },
+    "issues": [],
+    "status": "accepted",
+    "fallback": false,
+    "finish_reason": "stop",
+    "latency_seconds": 1.116,
+    "id": "c70d1af1-a173-4ba4-bce6-a989e042409c",
+    "timestamp": "2026-10-21T19:11:47.476967+00:00",
+    "prompt_version": "storydoor-2.1",
+    "check_version": "targeted-2.1",
+    "human_review": "pending",
+    "human_notes": ""
+  },
+  {
+    "story_id": "the_last_signal",
+    "action": "clock",
+    "history": [],
+    "decision": 1,
+    "model": "openai/gpt-oss-120b",
+    "prompt_sha256": "ae2085c884fd8c4fa18364713fe20da2abf2f111ed9fb501e440b07e050781f0",
+    "system_prompt": "\nYou narrate an interactive mystery in second person, present tense.\nReturn a short title and approximately 120–180 words of scene text.\n\nUse established_facts and required_outcome as the authoritative record.\nThe story bible and scene_constraints constrain your writing; they\nare not permission to reveal facts the reader has not discovered.\n\nDescribe the selected action and every consequence in required_outcome.\nPreserve quoted clues exactly.\nDo not add clues, objects, characters, supernatural effects, or\nreader decisions beyond the supplied record.\n\nYou may add restrained sensory descriptions of established surroundings:\ntheir texture, ordinary sounds, temperature, and smell.\nDo not turn those descriptions into new events or magical rules.\nUse concrete prose. Avoid repeatedly making the house breathe or sigh.\n\nDo not generate choices; the application supplies them.\nIf ending is null, do not resolve the story or perform a final action.\nIf ending is supplied, conclude with every required consequence.\nNever mention prompts, instructions, constraints, or required outcomes.\nUse the story-specific constraints for timing, objects, and causal order.\n\nReturn only the requested JSON object.\n\n\nA speculative coastal mystery in second person, present tense. The reader is the sole radio operator at a station scheduled to close at midnight. A damaged relay is repeating a transmission from twenty minutes ahead. It is the reader's voice, not a ghost. A maintenance boat is drifting without power beyond the breakwater. Dispatch can rescue it only with verified coordinates and a safe transmission frequency. The future recording is a warning, not a fixed destiny. No time travel, resurrection, or physical arrival of a future self. Events remain inside the station until an ending. No other person enters. Discovered clues never imply that a message has already been sent. Only the final choice transmits or shuts down. Keep human uncertainty and working detail central.",
+    "context": {
+      "opening": "The station closes at midnight. You have spent the evening labeling cables for the crew that will strip them out tomorrow.\n\nAt 23:40, the coast receiver speaks your name. It is your own voice, older by exhaustion, asking you not to switch it off.\n\nBeyond the window, rain obscures the breakwater. The receiver repeats three low notes. Then someone takes a breath.\n\nYour hand rests beside the shutdown switch. You have twenty minutes.",
+      "established_facts": [],
+      "selected_action": "Compare the recording timestamp with the station clock.",
+      "required_outcome": "The recording is dated twenty minutes ahead of the station clock. You write the discrepancy in the log. Nothing has yet been transmitted.",
+      "decision_number": 1,
+      "ending": null,
+      "scene_constraints": {
+        "time": "23:40 to midnight on the same rainy night. Never dawn.",
+        "equipment": "Fixed receiver, transmitter, station clock, paper logs, maintenance diagram. No brass key or supernatural house.",
+        "causality": "The recorded voice is a possible future transmission; the reader can change the outcome.",
+        "rescue": "Only the rescue ending transfers both technicians FROM the disabled Kestrel TO a separate rescue boat. Kestrel remains disabled; it does not carry them safely back to port. Dispatch confirms the transfer before the reader shuts down, all before midnight.",
+        "clock": "The station clock begins at 23:40. Twenty minutes later is 00:00 on the next calendar day, never 23:60. Future recording timestamps may say 00:00; current actions and departure must finish before midnight."
+      }
+    },
+    "raw_response": "{\n  \"title\": \"A Timestamp Out of Sync\",\n  \"text\": \"You stare at the glowing station clock, its hands trembling toward midnight. The recorder’s digital readout blinks 00:00, a full twenty minutes ahead of the 23:40 you see on the wall. Your pen hovers over the log sheet, the paper cold under your fingertips. You write, in neat block letters, \\\"Recording timestamp 00:00 – twenty minutes ahead of station clock 23:40. No transmission sent yet.\\\" The rain hammers the window, a steady percussion that masks the low notes still echoing from the receiver. The breath that follows the notes seems to linger, but you keep your focus on the paper, noting the discrepancy without adding interpretation. The shutdown switch remains untouched, the transmitter idle. The station hums around you, the only certainty the ticking of the clock and the wet scent of sea air seeping through the panes.\"\n}",
+    "displayed_scene": {
+      "title": "A Timestamp Out of Sync",
+      "text": "You stare at the glowing station clock, its hands trembling toward midnight. The recorder’s digital readout blinks 00:00, a full twenty minutes ahead of the 23:40 you see on the wall. Your pen hovers over the log sheet, the paper cold under your fingertips. You write, in neat block letters, \"Recording timestamp 00:00 – twenty minutes ahead of station clock 23:40. No transmission sent yet.\" The rain hammers the window, a steady percussion that masks the low notes still echoing from the receiver. The breath that follows the notes seems to linger, but you keep your focus on the paper, noting the discrepancy without adding interpretation. The shutdown switch remains untouched, the transmitter idle. The station hums around you, the only certainty the ticking of the clock and the wet scent of sea air seeping through the panes."
+    },
+    "issues": [],
+    "status": "accepted",
+    "fallback": false,
+    "finish_reason": "stop",
+    "latency_seconds": 1.463,
+    "id": "b6653cd0-1c97-4748-96be-364abc593377",
+    "timestamp": "2026-10-21T19:11:42.945364+00:00",
+    "prompt_version": "storydoor-2.1",
+    "check_version": "targeted-2.1",
+    "human_review": "pending",
+    "human_notes": ""
+  }
+]

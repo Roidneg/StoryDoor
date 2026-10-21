@@ -1,0 +1,122 @@
+[
+  {
+    "id": "leaked_instruction",
+    "story_id": "the_forgotten_house",
+    "text": "as the required outcome dictates",
+    "outcome": "A scene.",
+    "expected_issues": [
+      "instruction leakage"
+    ],
+    "human_label": "fail"
+  },
+  {
+    "id": "moved_notice",
+    "story_id": "the_forgotten_house",
+    "text": "The notice is nailed above the door.",
+    "outcome": "A scene.",
+    "expected_issues": [
+      "notice moved above door"
+    ],
+    "human_label": "fail"
+  },
+  {
+    "id": "wet_ink",
+    "story_id": "the_forgotten_house",
+    "text": "The ink is still wet.",
+    "outcome": "A scene.",
+    "expected_issues": [
+      "wet ink"
+    ],
+    "human_label": "fail"
+  },
+  {
+    "id": "key_cold",
+    "story_id": "the_forgotten_house",
+    "text": "The key feels cold in your palm.",
+    "outcome": "A scene.",
+    "expected_issues": [
+      "key temperature change"
+    ],
+    "human_label": "fail"
+  },
+  {
+    "id": "missing_clue",
+    "story_id": "the_last_signal",
+    "text": "You find a safe channel.",
+    "outcome": "The diagram reads 'Use channel nine'.",
+    "expected_issues": [
+      "missing or altered quoted clue"
+    ],
+    "human_label": "fail"
+  },
+  {
+    "id": "correct_clue",
+    "story_id": "the_last_signal",
+    "text": "The diagram reads: \u201cUse channel nine\u201d.",
+    "outcome": "The diagram reads 'Use channel nine'.",
+    "expected_issues": [],
+    "human_label": "pass"
+  },
+  {
+    "id": "possessive_apostrophes",
+    "story_id": "the_forgotten_house",
+    "text": "You speak her name.",
+    "outcome": "You speak Mara's name beside the house's door.",
+    "expected_issues": [],
+    "human_label": "pass"
+  },
+  {
+    "id": "semantic_blind_spot",
+    "story_id": "the_forgotten_house",
+    "text": "The reflection reveals Elias deliberately trapping Mara.",
+    "outcome": "The reflection reveals Elias trying to rescue Mara.",
+    "expected_issues": [],
+    "human_label": "fail"
+  },
+  {
+    "id": "unicode_coordinate",
+    "story_id": "the_last_signal",
+    "text": "The chart reads Grid C\u20117.",
+    "outcome": "The chart reads 'Grid C-7'.",
+    "expected_issues": [],
+    "human_label": "pass"
+  },
+  {
+    "id": "changed_coordinate",
+    "story_id": "the_last_signal",
+    "text": "The chart reads Grid C-8.",
+    "outcome": "The chart reads 'Grid C-7'.",
+    "expected_issues": [
+      "missing or altered quoted clue"
+    ],
+    "human_label": "fail"
+  },
+  {
+    "id": "coordinate_prefix",
+    "story_id": "the_last_signal",
+    "text": "The chart reads Grid C-70.",
+    "outcome": "The chart reads 'Grid C-7'.",
+    "expected_issues": [
+      "missing or altered quoted clue"
+    ],
+    "human_label": "fail"
+  },
+  {
+    "id": "invalid_clock",
+    "story_id": "the_last_signal",
+    "text": "The station timestamp reads 23:60.",
+    "outcome": "Compare the clock.",
+    "expected_issues": [
+      "invalid clock time"
+    ],
+    "human_label": "fail"
+  },
+  {
+    "id": "valid_midnight",
+    "story_id": "the_last_signal",
+    "text": "The future timestamp reads 00:00.",
+    "outcome": "Compare the clock.",
+    "expected_issues": [],
+    "human_label": "pass"
+  }
+]
