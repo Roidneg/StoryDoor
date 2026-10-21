@@ -79,8 +79,7 @@ The GitHub workflow runs pytest and the offline regression suite on Ubuntu/Pytho
 A fixed model API setup is retained; arbitrary model compatibility is not claimed. The application has one local save slot and no account isolation. Automated checks cannot guarantee plot continuity or prose quality.
 
 ## Collaboration
-
-Jorge set the product direction, chose the interactive-fiction format, ran the application, supplied actual model failures, and verified changes. Codex assisted with implementation, refactoring, regression fixtures, and tests. Continuity errors led to concrete design choices: Python owns consequences; prior generated prose is not authoritative; rejected text remains available for review; human semantic judgment remains explicit.
+I set the product direction, chose the interactive-fiction format, ran the application, supplied actual model failures, and verified changes. Codex assisted with implementation, refactoring, regression fixtures, and tests. Continuity errors led to concrete design choices: Python owns consequences; prior generated prose is not authoritative; rejected text remains available for review; human semantic judgment remains explicit.
 
 ## Version 2.1
 
